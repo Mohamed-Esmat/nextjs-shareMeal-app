@@ -32,6 +32,50 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# local env files
+.env.local
+# production env files
+.env.production
+# test env files
+.env.test
+# development env files
+.env.development
+# next.js cache
+.next/cache
+# next.js build cache
+.next/cache-loader
+# next.js static files
+.next/static
+# next.js serverless functions
+.next/serverless
+# next.js build output
+.next/build
+# next.js export
+.next/export
+# next.js server
+.next/server
+# next.js static files
+.next/static
+# next.js serverless functions
+.next/serverless-functions
+# next.js serverless functions
+.next/serverless-functions
+# next.js static files
+.next/static-files
+# next.js serverless functions
+.next/serverless-functions
+# next.js static files
+.next/static-files
+# next.js serverless functions
+.next/serverless-functions
+# next.js static files
+.next/static-files
+# next.js serverless functions
+.next/serverless-functions
+# next.js static files
+.next/static-files
+# next.js serverless functions
+
 
 # vercel
 .vercel

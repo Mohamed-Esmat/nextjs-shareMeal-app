@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍽️ NextJS ShareMeal App – Esmat
 
-## Getting Started
+Welcome to **NextJS ShareMeal App** – Esmat’s community-driven meals sharing platform, powered by Next.js & Supabase! 🌐✨
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Share delicious recipes and discover new meals from fellow food enthusiasts:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- 📖 **Browse** a gallery of community-shared meals
+- 🍳 **View** step-by-step cooking instructions
+- 🖼️ **Upload** and share your own meal photos & details
+- 🤝 **Join** a growing community of food lovers
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This application uses:
 
-## Learn More
+- **Next.js 15** (App Router) & **React 19**
+- **SQLite** (`better-sqlite3`) for data storage
+- **Supabase Storage** for user-uploaded images (500 MB free tier)
+- **CSS Modules** for scoped styling
+- **Netlify** for seamless deployments
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎬 Live Demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Experience the app in action: [https://nextjs-shareMeal-app-esmat.netlify.app](https://nextjs-shareMeal-app-esmat.netlify.app)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Local Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repo**
+
+   ```bash
+   git clone https://github.com/Mohamed-Esmat/nextjs-shareMeal-app-esmat.git
+   cd nextjs-shareMeal-app-esmat
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment variables**
+   Create a file named `.env.local` in the project root with:
+
+   ```ini
+   NEXT_PUBLIC_SUPABASE_URL=https://<YOUR_PROJECT_ID>.supabase.co
+   SUPABASE_SERVICE_ROLE_KEY=<YOUR_SERVICE_ROLE_KEY>
+   ```
+
+   _Keep this file private!_ 🔒
+
+4. **Initialize and seed the database**
+
+   ```bash
+   node initdb.js
+   ```
+
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   Open <http://localhost:3000> in your browser.
+
+---
+
+## 🌐 Supabase Storage Setup
+
+1. Go to your Supabase Dashboard → **Storage** → **Create Bucket**
+2. Name the bucket `images` and enable **Public** access
+3. Use the Service Role Key for server-side uploads
+
+---
+
+## 📦 NPM Scripts
+
+- `npm run dev` – Start development server
+- `npm run build` – Build for production
+- `npm run start` – Run production build
+- `node initdb.js` – Create & seed SQLite DB
+- `node scripts/uploadImages.js` – Bulk upload `public/images` to Supabase
+
+---
+
+## 🌟 Deployment to Netlify
+
+1. Push your repository to GitHub
+2. In Netlify Dashboard → **New site from Git** → connect repo
+3. **Build settings**:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+4. Add environment variables in Netlify settings (same as `.env.local`)
+5. Deploy! Netlify will auto-build on every push.
+
+---
+
+## 📈 Next Steps & Features
+
+- 🔒 **User Authentication** (NextAuth + Supabase)
+- ✏️ Edit & Delete shared meals
+- ❤️ Like & Comment on recipes
+- 🌙 Dark mode support
+
+Contributions welcome! Feel free to open issues or submit pull requests. 🛠️
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
