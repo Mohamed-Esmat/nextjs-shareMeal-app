@@ -3,6 +3,23 @@ import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import { getMealBySlug } from "@/lib/meals";
 
+export async function generateMetadata({ params }) {
+  const meal = await getMealBySlug(params.mealSlug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal?.title
+      ? `${meal.title} - NextLevel Food Recipes`
+      : "Meal Not Found",
+    description: meal?.summary
+      ? meal.summary
+      : "Explore this delicious meal shared by our community.",
+  };
+}
+
 export default async function MealDetailPage({ params }) {
   const meal = await getMealBySlug(params.mealSlug);
 
