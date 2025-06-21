@@ -34,8 +34,8 @@ Experience the app in action: [https://nextjs-shareMeal-app-esmat.netlify.app](h
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/Mohamed-Esmat/nextjs-shareMeal-app-esmat.git
-   cd nextjs-shareMeal-app-esmat
+   git clone https://github.com/Mohamed-Esmat/nextjs-shareMeal-app.git
+   cd nextjs-shareMeal-app
    ```
 
 2. **Install dependencies**
